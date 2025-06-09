@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 from db.models import listar_tipos, insertar_cartera, consultar_carteras_por_tipo
 
@@ -35,5 +36,10 @@ def buscar():
 def page_not_found(e):
     return render_template('error404.html'), 404
 
-if __name__ == "__main__":
-    app.run(debug=True)  # Asegúrate de que el modo debug esté activado
+#if __name__ == "__main__":
+# app.run(debug=True)  
+
+if __name__ == '__main__':
+    if not os.path.exists(app.config ['UPLOAD_FOLDER']):
+        os.makedirs(app.config [ 'UPLOAD_FOLDER'])
+    app.run(debug=True, host="0.0.0.0", port=os.getenv("PORT", default=5000))
