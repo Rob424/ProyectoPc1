@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">UNFV - FIIS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Menú desplegable Operaciones -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="operacionesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Operaciones
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="operacionesDropdown">
+            <li><a class="dropdown-item" href="/RegistrarCarteraS">Registrar Cartera</a></li>
+            <li><a class="dropdown-item" href="/ConsultarCartera">Consultar Cartera</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Botón de cerrar sesión -->
+      <form class="d-flex">
+        <a href="/login" class="btn btn-danger">Cerrar sesión</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container mt-5">
+  <div class="text-center">
+    <h3>Bienvenido a FIIS - UNFV</h3>
+    <p>Seleccione una opción del menú superior para continuar.</p>
+  </div>
+</div>
+
+<!-- Scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
